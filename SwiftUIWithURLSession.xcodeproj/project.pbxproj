@@ -11,6 +11,7 @@
 		DECC32D729C3A80700DEA53A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC32D629C3A80700DEA53A /* ContentView.swift */; };
 		DECC32D929C3A80800DEA53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DECC32D829C3A80800DEA53A /* Assets.xcassets */; };
 		DECC32DC29C3A80800DEA53A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DECC32DB29C3A80800DEA53A /* Preview Assets.xcassets */; };
+		DECC32E329C3A82600DEA53A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC32E229C3A82600DEA53A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DECC32D629C3A80700DEA53A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DECC32D829C3A80800DEA53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DECC32DB29C3A80800DEA53A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DECC32E229C3A82600DEA53A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		DECC32C829C3A80700DEA53A = {
 			isa = PBXGroup;
 			children = (
+				DECC32E229C3A82600DEA53A /* User.swift */,
 				DECC32D329C3A80700DEA53A /* SwiftUIWithURLSession */,
 				DECC32D229C3A80700DEA53A /* Products */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				DECC32D729C3A80700DEA53A /* ContentView.swift in Sources */,
 				DECC32D529C3A80700DEA53A /* SwiftUIWithURLSessionApp.swift in Sources */,
+				DECC32E329C3A82600DEA53A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

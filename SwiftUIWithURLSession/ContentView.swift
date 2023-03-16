@@ -8,14 +8,54 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var users = [User]()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack{
+            List(users){ user in
+                HStack{
+                    Text("\(user.id)")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.gray)
+                        .clipShape(Circle())
+                    VStack(alignment: .leading){
+                        
+                        Text(user.name)
+                            .font(.headline)
+                        Text(user.email)
+                            .font(.subheadline)
+                    }
+                }
+            }
+            .onAppear(perform: loadData)
+            .navigationTitle("SwiftUI & URL Session")
         }
-        .padding()
+    }
+    
+    func loadData(){
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url){ data,response,error in
+            
+            guard let data = data else {
+                return
+            }
+            
+            do{
+                let decoder = JSONDecoder()
+                let decodeData = try decoder.decode([User].self, from: data)
+                DispatchQueue.main.async {
+                    self.users = decodeData
+                }
+                
+            }catch let error{
+                print(error)
+            }
+            
+        }.resume()
     }
 }
 
